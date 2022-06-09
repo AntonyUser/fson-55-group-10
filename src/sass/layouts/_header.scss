@@ -2,7 +2,7 @@
   background-color: #1e252b;
 }
 
-.header-container {
+.container--flex {
   display: flex;
   align-items: center;
 }
@@ -10,7 +10,7 @@
 .logo {
   display: flex;
   align-items: center;
-  margin-right: 257px;
+  margin-right: auto;
 
   font-weight: 600;
   font-size: 22px;
@@ -55,18 +55,6 @@
   margin-left: auto;
 }
 
-.site-auth__link {
-  display: block;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-weight: 600;
-  margin-right: 41px;
-
-  color: $sec-title-color;
-
-  opacity: 0.78;
-}
-
 .button {
   padding: 12px 28px;
   background-color: #ff6e30;
@@ -79,4 +67,11 @@
   border-radius: 8px;
   border: transparent;
   cursor: pointer;
+}
+
+.button--transparent {
+  margin-right: 10px;
+  background-color: transparent;
+
+  color: $pr-text-color;
 }
