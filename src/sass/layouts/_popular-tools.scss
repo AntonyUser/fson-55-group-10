@@ -26,13 +26,13 @@
 }
 
 .cardset {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  row-gap: 100px;
 }
 
 .cardset__item {
-  margin: 12px;
   overflow: hidden;
   transition: transform 250ms linear;
 
@@ -59,25 +59,18 @@
     background-color: #ff6e30;
   }
 
-  &:hover .cardset__bottom-icon:nth-child(1),
-  &:focus .cardset__bottom-icon:nth-child(1) {
+  &:hover .cardset__label,
+  &:focus .cardset__label {
     background-color: #283036;
     box-shadow: 0px 5px 10px -3px rgba(18, 18, 18, 0.15);
     border-radius: 8px;
-    fill: #fd3b41;
   }
-}
-
-.cardset__bottom-icon {
-  fill: rgba(255, 255, 255, 0.38);
 }
 
 .cardset__wrapper {
   display: flex;
   flex-wrap: wrap;
   padding: 33px;
-  width: 392px;
-  height: 294px;
 }
 
 .cardset__icon {
@@ -116,16 +109,46 @@
   align-items: center;
 }
 
-.cardset__bottom-icon {
+.cardset__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  margin-right: 12px;
+
   padding: 7px;
   width: 42px;
   height: 42px;
+}
+
+.cardset__input {
+  appearance: none;
+  margin: 0;
+
+  &:focus + .cardset__icon-like {
+    fill: rgba(200, 161, 161, 0.38);
+  }
+
+  &:checked + .cardset__icon-like {
+    fill: #fd3b41;
+  }
+}
+
+.cardset__icon-like {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  fill: rgba(255, 255, 255, 0.38);
 
   transition: fill 250ms linear;
 }
 
-.cardset__bottom-icon:not(:nth-child(2)) {
-  margin-right: 12px;
+.cardset__bottom-icon {
+  padding: 7px;
+  width: 42px;
+  height: 42px;
 }
 
 .cardset__button {
