@@ -1,0 +1,40 @@
+.clients-container {
+    text-align: center;
+
+    padding: 55px 82px;
+
+    background-image: radial-gradient(
+        circle at top left,
+        rgba(255, 72, 66, 0.4) -8%,
+        rgba(44, 53, 61, 0.2) 10%);
+
+    border-radius: 25px;
+    background-color: #1E252B;
+    backdrop-filter: blur(50px);
+}
+
+.clients-container__text {
+    margin-bottom: 55px;
+
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+    }
+    &__icon {
+        fill: rgba(255, 255, 255, 0.2);
+    }
+}
